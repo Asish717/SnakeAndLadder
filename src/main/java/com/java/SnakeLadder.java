@@ -15,5 +15,16 @@ public class SnakeLadder {
         } else {
             System.out.println(ran);
         }
+        int option=random.nextInt(3);
+        switch (option){
+            case 0:
+                System.out.println("No play: player stays in the same position");
+                break;
+            case 1:
+                System.out.println("Ladder: player moves ahead by dice position");
+                break;
+            case 2:
+                System.out.println("Snake: player moves behind by dice position");
+        }
     }
 }
