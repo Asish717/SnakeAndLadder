@@ -4,8 +4,6 @@ import java.util.Random;
 
 public class SnakeLadder {
     public static final int BoardSize = 100;
-    public static final int[] Snake={27,35,48,62,88,95,98};
-    public static final int[] Ladder={4,8,21,28,50,80,71};
     public static Random random = new Random();
     public static void main(String[] args) {
         int playerPosition = 0;
@@ -26,6 +24,9 @@ public class SnakeLadder {
             }
             if (playerPosition<0){
                 playerPosition=0;
+            }
+            else if (playerPosition>BoardSize){
+                playerPosition=BoardSize-(playerPosition-BoardSize);
             }
             System.out.println(playerPosition);
         }
